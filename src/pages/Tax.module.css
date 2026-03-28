@@ -1,0 +1,368 @@
+.container {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.backBtn {
+  color: var(--accent-primary);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.backBtn:hover {
+  text-decoration: underline;
+}
+
+.topicHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.topicIcon {
+  font-size: 32px;
+}
+
+.topicHeader h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.topicContent {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.topicContent p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.topicContent p:last-child {
+  margin-bottom: 0;
+}
+
+.topicContent strong {
+  color: var(--text-primary);
+}
+
+.topicsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.topicCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  text-align: left;
+  width: 100%;
+}
+
+.topicCard:hover {
+  border-color: var(--accent-primary);
+  transform: translateX(4px);
+}
+
+.topicCard .topicIcon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.topicInfo {
+  flex: 1;
+}
+
+.topicInfo h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 2px;
+}
+
+.topicInfo p {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.chevron {
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.calculatorsSection {
+  margin-bottom: 32px;
+}
+
+.calculatorsSection > h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.calcTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.calcTab {
+  flex: 1;
+  padding: 10px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: all 0.15s ease-out;
+}
+
+.calcTab:hover {
+  color: var(--text-primary);
+}
+
+.activeCalcTab {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+.calcPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  color: var(--text-tertiary);
+}
+
+.calcForm {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.inputGroup {
+  margin-bottom: 16px;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.inputGroup input,
+.inputGroup select {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.inputGroup input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.radioLabel input {
+  accent-color: var(--accent-primary);
+  width: auto;
+}
+
+.calcBtn {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease-out;
+  margin-top: 8px;
+}
+
+.calcBtn:hover {
+  background: var(--accent-secondary);
+}
+
+.resultCard {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(0, 210, 106, 0.05);
+  border: 1px solid rgba(0, 210, 106, 0.2);
+  border-radius: var(--radius-sm);
+}
+
+.resultCard h4 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--accent-primary);
+}
+
+.resultRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.resultRow:last-of-type {
+  border-bottom: none;
+}
+
+.resultRow span:first-child {
+  color: var(--text-secondary);
+}
+
+.resultRow span:last-child {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.highlight {
+  background: rgba(0, 210, 106, 0.05);
+  margin: 8px -16px;
+  padding: 10px 16px;
+}
+
+.total {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 210, 106, 0.3);
+}
+
+.total span:last-child {
+  font-size: 18px;
+  color: var(--accent-primary);
+}
+
+.profit {
+  color: var(--chart-green) !important;
+}
+
+.loss {
+  color: var(--chart-red) !important;
+}
+
+.resultNote {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.historySection {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.historySection h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.emptyHistory {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: 16px;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+.historyType {
+  font-size: 12px;
+  text-transform: capitalize;
+  color: var(--text-secondary);
+}
+
+.historyResult {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-primary);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

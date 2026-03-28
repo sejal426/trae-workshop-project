@@ -1,0 +1,351 @@
+.container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 24px;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcome {
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.logo {
+  font-size: 64px;
+  margin-bottom: 16px;
+  animation: bounce 2s infinite;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, #00ffcc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-size: 18px;
+  color: var(--accent-primary);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.vibeSelect {
+  animation: slideUp 0.4s ease-out;
+}
+
+.vibeTitle {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.vibeSubtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.vibeList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vibeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  text-align: center;
+}
+
+.vibeCard:hover {
+  border-color: var(--vibe-color);
+  transform: translateY(-2px);
+}
+
+.vibeCard.selected {
+  border-color: var(--vibe-color);
+  background: rgba(0, 210, 106, 0.05);
+  box-shadow: 0 0 20px rgba(0, 210, 106, 0.1);
+}
+
+.vibeEmoji {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.vibeName {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.vibeDesc {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.continueBtn {
+  width: 100%;
+  max-width: 320px;
+  padding: 16px 24px;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease-out;
+}
+
+.continueBtn:hover:not(:disabled) {
+  background: var(--accent-secondary);
+  transform: translateY(-1px);
+}
+
+.continueBtn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.continueBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.skipText {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.moneySelect {
+  animation: slideUp 0.4s ease-out;
+}
+
+.moneyTitle {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.moneySubtitle {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.amountDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--tier-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  box-shadow: 0 0 30px color-mix(in srgb, var(--tier-color) 20%, transparent);
+}
+
+.tierEmoji {
+  font-size: 40px;
+}
+
+.tierLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tier-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.amountValue {
+  font-family: var(--font-mono);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: all 0.3s ease-out;
+}
+
+.amountValue.revealing {
+  animation: revealPulse 0.8s ease-in-out infinite;
+}
+
+.amountValue.revealed {
+  color: var(--tier-color);
+  text-shadow: 0 0 20px var(--tier-color);
+}
+
+@keyframes revealPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.sliderContainer {
+  margin-bottom: 24px;
+}
+
+.moneySlider {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-pill);
+  outline: none;
+  cursor: pointer;
+}
+
+.moneySlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: var(--tier-color);
+  border-radius: 50%;
+  cursor: grab;
+  box-shadow: 0 0 15px var(--tier-color);
+  transition: transform 0.15s ease-out;
+}
+
+.moneySlider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.moneySlider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.1);
+}
+
+.moneySlider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: var(--tier-color);
+  border: none;
+  border-radius: 50%;
+  cursor: grab;
+  box-shadow: 0 0 15px var(--tier-color);
+}
+
+.sliderLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.tierGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.tierCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  background: var(--bg-secondary);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease-out;
+  opacity: 0.6;
+}
+
+.tierCard.activeTier {
+  border-color: var(--tier-color);
+  opacity: 1;
+  background: color-mix(in srgb, var(--tier-color) 10%, var(--bg-secondary));
+  box-shadow: 0 0 15px color-mix(in srgb, var(--tier-color) 15%, transparent);
+}
+
+.tierCardEmoji {
+  font-size: 24px;
+}
+
+.tierCardLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.tierCardRange {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
