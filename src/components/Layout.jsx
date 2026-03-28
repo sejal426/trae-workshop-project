@@ -10,11 +10,16 @@ const tabs = [
   { path: '/profile', icon: User, label: 'Profile' },
 ];
 
-function Layout({ children }) {
+function Layout({ children, isAuthenticated, user }) {
   const location = useLocation();
 
   return (
     <div className={styles.container}>
+      {isAuthenticated && user && (
+        <div className={styles.userBar}>
+          <span className={styles.userGreeting}>Hey, {user.name?.split(' ')[0] || 'Traders'}! 👋</span>
+        </div>
+      )}
       <main className={styles.main}>{children}</main>
       <nav className={styles.tabBar}>
         {tabs.map(({ path, icon: Icon, label }) => (

@@ -124,6 +124,7 @@
   font-size: 32px;
   font-weight: 700;
   margin: 4px 0;
+  color: var(--accent-primary);
 }
 
 .portfolioChange {
@@ -470,6 +471,7 @@
   font-family: var(--font-mono);
   font-size: 14px;
   font-weight: 500;
+  color: var(--accent-primary);
 }
 
 .up {
@@ -551,6 +553,7 @@
   font-family: var(--font-mono);
   font-size: 28px;
   font-weight: 700;
+  color: var(--accent-primary);
 }
 
 .change {

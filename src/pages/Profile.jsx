@@ -1,5 +1,7 @@
-import { Award, TrendingUp, Target, BookOpen, Zap, ChevronRight } from 'lucide-react';
+import { Award, TrendingUp, Target, BookOpen, Zap, ChevronRight, LogOut } from 'lucide-react';
 import useStore from '../store/useStore';
+import useAuthStore from '../store/useAuthStore';
+import { useNavigate } from 'react-router-dom';
 import styles from './Profile.module.css';
 
 const BADGES_DATA = [
@@ -32,6 +34,14 @@ function Profile() {
   const cash = useStore((state) => state.cash);
   const getPortfolioValue = useStore((state) => state.getPortfolioValue);
   const getTotalPnL = useStore((state) => state.getTotalPnL);
+  const logout = useAuthStore((state) => state.logout);
+  const authUser = useAuthStore((state) => state.user);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
 
   const currentLevel = LEVELS.find(level => xp >= level.minXp && xp < level.maxXp) || LEVELS[LEVELS.length - 1];
   const currentLevelIndex = LEVELS.indexOf(currentLevel);
@@ -59,14 +69,19 @@ function Profile() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.userInfo}>
-          <div className={styles.avatar}>
-            <span>{vibeEmoji}</span>
+        <div className={styles.headerTop}>
+          <div className={styles.userInfo}>
+            <div className={styles.avatar}>
+              <span>{vibeEmoji}</span>
+            </div>
+            <div>
+              <h1 className={styles.name}>{authUser?.name || 'BrokeButSmart User'}</h1>
+              <p className={styles.vibe}>{authUser?.email}</p>
+            </div>
           </div>
-          <div>
-            <h1 className={styles.name}>BrokeButSmart User</h1>
-            <p className={styles.vibe}>{vibeText}</p>
-          </div>
+          <button className={styles.logoutBtn} onClick={handleLogout}>
+            <LogOut size={18} /> Logout
+          </button>
         </div>
       </div>
 

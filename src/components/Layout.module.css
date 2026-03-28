@@ -6,6 +6,18 @@
   background: var(--bg-primary);
 }
 
+.userBar {
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.userGreeting {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-primary);
+}
+
 .main {
   flex: 1;
   padding: 16px;

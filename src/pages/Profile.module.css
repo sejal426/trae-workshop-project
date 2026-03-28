@@ -6,10 +6,34 @@
   margin-bottom: 24px;
 }
 
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .userInfo {
   display: flex;
   align-items: center;
   gap: 14px;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 13px;
+  transition: all 0.15s ease-out;
+}
+
+.logoutBtn:hover {
+  border-color: var(--accent-danger);
+  color: var(--accent-danger);
 }
 
 .avatar {
